@@ -140,7 +140,9 @@ body {
 }
 
 @media (max-width: 500px) {
-
+body {
+  overflow: scroll;
+}
   .Container-ul {
     flex-direction: column;
     align-items: flex-start;
@@ -160,6 +162,9 @@ body {
   .Img {
     min-height: 10vh;
   }
+  .Container-h2:hover.Black {
+  color: var(--c-secondary);
+}
   
 }
 
