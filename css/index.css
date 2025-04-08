@@ -1,0 +1,167 @@
+:root {
+  scroll-behavior : smooth;
+}
+* , *::before , *::after {
+  margin : 0;
+  padding : 0;
+  border : 0;
+  box-sizing : border-box;
+  vertical-align : baseline;
+}
+img , picture , video , iframe , figure , canvas {
+  max-width : 100%;
+  display : block;
+  width : 100%;
+  height : initial;
+  object-fit : cover;
+  object-position : center center;
+}
+li , menu, summary {
+  list-style-type : none;
+}
+ol {
+  counter-reset : revert;
+}
+mark {
+  background-color : transparent;
+}
+svg {
+  width : 100%;
+  display : block;
+  fill : currentColor;
+}
+body {
+  min-height : 100vh;
+}
+
+/* FIN RESET */
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3.5em;
+  font-weight: 600;
+  color: var(--c-secondary);
+}
+
+p {
+  font-family: "Italianno", cursive;
+  font-size: 1.5em;
+  color: var(--c-secondary);
+}
+
+:root {
+  --c-primary: rgb(49, 49, 49);
+  --c-secondary: whitesmoke; 
+}
+
+body {
+  width: 100%;
+  background-color: var(--c-primary);
+  overflow: hidden;
+}
+
+.Main {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.Container {
+  width: 100%;
+  position: relative;
+ 
+}
+
+/* .Wrapper {
+  max-height: 300px;
+} */
+
+.Imagen  {
+  max-height: 100vh;
+  position: absolute;
+  opacity: 0;
+  z-index: 0; 
+
+  animation: moverse 15s ease both 2.5s; 
+} 
+
+
+.Container-ul {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem;
+  
+}
+
+.Container-li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: .5rem;
+  cursor: pointer;
+  z-index: 1;
+  
+}
+.Container-h2:hover.Black {
+  color: var(--c-primary);
+}
+
+.Container-h2:hover {
+  color: var(--c-secondary);
+  opacity: 1;
+}
+
+.Container-li:hover .Container-p.Black {
+  color: var(--c-primary);
+}
+
+ @keyframes moverse {
+  from {transform: scale(1);}
+  to {transform: scale(1.1);}
+} 
+
+@media (max-width: 1000px) {
+  h2 {
+    font-size: 3em;
+  }
+  p {
+    font-size: 1em;
+  }
+  
+}
+
+@media (max-width: 500px) {
+
+  .Container-ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .Container-li {
+    flex-direction: column;
+    gap: .2rem;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+  p {
+    font-size: .5em;
+  }
+  .Img {
+    min-height: 10vh;
+  }
+  
+}
+
+
+
